@@ -20,7 +20,14 @@
                 height: auto; /* Adjust the height for small screens */
             }
         }
-    </style>
+        </style>
+        <style>
+            /* Style adjustments for the card */
+            .card {
+                opacity: 0; /* Start with 0 opacity to make it invisible */
+                transition: opacity 1s; /* Add a smooth transition effect */
+            }
+        </style>
     </head>
 
     <body>
@@ -308,6 +315,18 @@
             </script>
 
             
+                <script>
+                    // Wait for the document to be ready
+                    $(document).ready(function() {
+                        // Select the card element
+                        var card = $('.card');
+
+                        // Fade in the card when the page loads
+                        card.css('opacity', '1');
+                    });
+                </script>
+
+
                 <script>
                     const icon = document.getElementById('myIcon');
 
